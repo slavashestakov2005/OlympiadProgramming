@@ -1,0 +1,83 @@
+\def\skippar{2cm}
+\definecolor{bg}{rgb}{0.95,0.95,0.92}
+\DeclareCaptionLabelFormat{custom}{}
+\setlength{\parindent}{1cm}
+\newcounter{line}
+\newcounter{linetmp}
+
+\def\header{
+    \titleformat{\section}[display]{\filcenter}{}{12pt}{\bfseries}{}
+    \titleformat{\subsection}[display]{\filcenter}{}{12pt}{\bfseries}{}
+    \titleformat{\subsubsection}[display]{\filcenter}{}{12pt}{\bfseries}{}
+    \captionsetup{labelformat=custom}
+}
+
+\def\cpp#1#2{
+    \setcounter{linetmp}{\thelinetmp + #2 - 1}
+    \inputminted[fontsize=\footnotesize, linenos=true, xleftmargin=\skippar, firstnumber=1,
+    firstline=\theline, lastline=\thelinetmp]{C++}{programs/#1.cpp}
+    \setcounter{line}{\theline + #2}
+    \stepcounter{linetmp}
+}
+
+\newmintinline[lcpp]{C++}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
+\newmintinline[lpy]{Python}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
+\newmintinline[lmd]{Markdown}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
+
+\def\headS#1{
+    \section{\Large #1}
+    \indent
+    
+}
+
+\def\head#1{
+    \setcounter{line}{1}
+    \setcounter{linetmp}{1}
+    \subsection{\Large #1}
+    \indent
+    
+}
+
+\def\subhead#1{
+    \subsubsection{\large #1}
+    \indent
+    
+}
+
+\def\term#1{\textit{«#1»}}
+
+\def\startspace{\begin{center}}
+
+\def\endspace{\end{center}}
+
+\def\emptyline{\ \\\indent}
+\def\starttable{\begin{center}}
+\def\endtable{\end{center}}
+
+\def\sortme#1#2{\href{https://sort-me.org/tasks/#1}{#2}}
+
+\def\div{\mathop{\raisebox{-2pt}{\vdots}}}
+\def\mod{\mathop{\raisebox{-2pt}{\%}}}
+\def\set#1{\mathbb{#1}}
+\def\dash{\text{ -- }}
+
+
+% \def\O#1{\colorbox{yellow}{$O(#1)$}}
+\def\O#1{\textcolor{blue}{$O(#1)$}}
+\def\ac#1{\alpha(#1)}
+\def\v#1{\overrightarrow{#1}}
+\def\p#1#2{$\left(#1;#2\right)$}
+\def\pmath#1#2{\left(#1;#2\right)}
+\DeclareMathOperator{\atantwo}{atan2}
+\newenvironment{multisys}
+ {\begin{minipage}{\displaywidth}
+  \lineskip=1ex
+  \leftskip=0pt plus 1fil
+  % \rightskip=.15\displaywidth plus 1fill
+  \parfillskip=-.15\displaywidth plus -1fill
+  $}
+ {$\end{minipage}}
+
+\newenvironment{system}
+ {\left\lbrace\renewcommand{\arraystretch}{1.2}\begin{array}{@{}l@{}}}
+ {\end{array}\right.\kern-\nulldelimiterspace}
