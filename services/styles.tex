@@ -1,5 +1,6 @@
 \def\skippar{2cm}
 \definecolor{bg}{rgb}{0.95,0.95,0.92}
+\definecolor{darkgreen}{rgb}{0,0.6,0}
 \DeclareCaptionLabelFormat{custom}{}
 \setlength{\parindent}{1cm}
 \newcounter{line}
@@ -10,6 +11,7 @@
     \titleformat{\subsection}[display]{\filcenter}{}{12pt}{\bfseries}{}
     \titleformat{\subsubsection}[display]{\filcenter}{}{12pt}{\bfseries}{}
     \captionsetup{labelformat=custom}
+    \renewcommand{\contentsname}{\Large Содержание}
 }
 
 \def\cpp#1#2{
@@ -54,6 +56,28 @@
 \def\starttable{\begin{center}}
 \def\endtable{\end{center}}
 
+\newenvironment{wrapping}[1]
+	{
+		\vspace{0.1cm}
+		\begin{minipage}[c]{#1\linewidth}
+			\def\skippar{2cm}
+			\setlength{\parindent}{1cm}
+			\leftskip=-1cm
+	}{
+		\vspace{-0.05cm}
+	}
+\def\wrappedimg#1#2#3{
+	\end{minipage}
+	\begin{minipage}[c]{0.03\linewidth}\ \end{minipage}
+	\begin{minipage}[c]{#1\linewidth}
+		\includegraphics[scale=#2]{img/#3}
+	\end{minipage}
+}
+
+
+\let\myfootnote\footnote
+\renewcommand{\footnote}[1]{\myfootnote{~#1}}
+\def\hrefs#1#2{\textcolor{cyan}{\href{#1}{#2}}}
 \def\sortme#1#2{\href{https://sort-me.org/tasks/#1}{#2}}
 
 \def\div{\mathop{\raisebox{-2pt}{\vdots}}}

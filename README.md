@@ -9,11 +9,7 @@
 + Папка [services](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/services) – служебная, отвечающая за стили.
 + Папка [img](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/img) – иллюстрации к книге.
 + Папка [programs](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/programs) – файлы с кодом к книге.
-+ Сама [pdf-книга](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build/main.pdf)
++ В папке [build](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build) находится сама [pdf-книга](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build/main.pdf) и последняя скомпилированная [глава](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build/main.pdf).
 
 ## Использованные программы
 Раньше для сборки книги использовался сайт [Overleaf](https://www.overleaf.com), теперь же книга собирается локально с помощью [MiKTeX](https://miktex.org/) и редактируется в [Texmaker](https://www.xm1math.net/texmaker/).
- 
-
-
-
