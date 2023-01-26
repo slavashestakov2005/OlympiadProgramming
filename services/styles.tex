@@ -75,10 +75,11 @@
 }
 
 
-\let\myfootnote\footnote
-\renewcommand{\footnote}[1]{\myfootnote{~#1}}
-\def\hrefs#1#2{\textcolor{cyan}{\href{#1}{#2}}}
-\def\sortme#1#2{\hrefs{https://sort-me.org/tasks/#1}{#2}}
+\let\simplefootnote\footnote
+\renewcommand{\footnote}[1]{\simplefootnote{~#1}}
+\let\simplehref\href
+\def\href#1#2{\textcolor{cyan}{\simplehref{#1}{#2}}}
+\def\sortme#1#2{\href{https://sort-me.org/tasks/#1}{#2}}
 
 \def\div{\mathop{\raisebox{-2pt}{\vdots}}}
 \def\mod{\mathop{\raisebox{-2pt}{\%}}}
