@@ -48,21 +48,45 @@ struct SparseTable{
 struct FenwickTree{
     vector<int> t;
     int n;
-    
+
     FenwickTree(vector<int> a){
         n = a.size();
-        t.assign(n, 0);                                         // конструирование — 
+        t.assign(n, 0);                                         // конструирование —
         for(int i = 0; i < a.size(); ++i) add(i, a[i]);         // это много обновлений
     }
-    
+
     void add(int p, int d){
         for (; p < n; p = (p | (p + 1))) t[p] += d;             // запомнить p | (p + 1)
     }
-    
+
     int sum(int r){
         int result = 0;
         for (; r >= 0; r = (r & (r + 1)) - 1) result += t[r];   // запомнить r & (r + 1),
         return result;                                          // понять -1 из формулы t[i]
+    }
+
+    int sum(int l, int r){
+        return sum(r) - sum(l - 1);
+    }
+};
+struct FenwickTree{
+    vector<int> t;
+    int n;
+
+    FenwickTree(vector<int> a){
+        n = a.size() + 1;                                       // t[0] - не используем
+        t.assign(n, 0);                                         // конструирование —
+        for(int i = 0; i < a.size(); ++i) add(i + 1, a[i]);     // это много обновлений
+    }
+
+    void add(int p, int d){
+        for (; p < n; p += p & -p) t[p] += d;                   // запомнить p & -p
+    }
+
+    int sum(int r){
+        int result = 0;
+        for (; r > 0; r -= r & -r) result += t[r];              // запомнить r & -r,
+        return result;
     }
 
     int sum(int l, int r){
