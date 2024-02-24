@@ -12,4 +12,6 @@
 + В папке [build](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build) находится сама [pdf-книга](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build/main.pdf) и последняя скомпилированная [глава](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/build/main.pdf).
 
 ## Использованные программы
-Раньше для сборки книги использовался сайт [Overleaf](https://www.overleaf.com), теперь же книга собирается локально с помощью [MiKTeX](https://miktex.org/) и редактируется в [Texmaker](https://www.xm1math.net/texmaker/).
++ Раньше для сборки книги использовался сайт [Overleaf](https://www.overleaf.com), но в какой-то момент книга перестала успевать компилироваться за минуту.
++ После этого книга стала собираться локально с помощью [MiKTeX](https://miktex.org/) и редактироваться в [Texmaker](https://www.xm1math.net/texmaker/).
++ Но сейчас под вместо `Texmaker` используется [Visual Studio Code](https://code.visualstudio.com/), так как это более удобная среда, поддерживающая больше настроек.

@@ -1,0 +1,9 @@
+{
+    "latex-workshop.latex.search.rootFiles.exclude": [
+        "main.tex"
+    ],
+    "latex-workshop.latex.external.build.command": ".vscode/compile.bat",
+    "latex-workshop.latex.external.build.args": [
+        "%DOCFILE_EXT%"
+    ]
+}
