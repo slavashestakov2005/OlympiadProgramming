@@ -22,6 +22,12 @@
     \stepcounter{linetmp}
 }
 
+\def\nocode{
+    \begin{tcolorbox}[sharp corners, colback=green!30, colframe=green!80!blue, title=Код]
+        Кода не будет :)
+    \end{tcolorbox}
+}
+
 \newmintinline[lcpp]{C++}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
 \newmintinline[lpy]{Python}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
 \newmintinline[lmd]{Markdown}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
