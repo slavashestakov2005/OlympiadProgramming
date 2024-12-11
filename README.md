@@ -4,7 +4,8 @@
 ## Файловая структура
 + Папка [intro](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/intro) – первая часть книги, вступление.
 + Папка [base](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/base) – вторая часть книги, введение в C++.
-+ Папка [olymp](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/olymp) – третья часть книги, олимпиадное программирование.
++ Папка [infra](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/infra) - третья часть книги, олимпиадная "инфрастуктура" - как писать код, как тестировать, как дебажить.
++ Папка [olymp](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/olymp) – четвертая часть книги, олимпиадное программирование.
 + Папка [pages](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/pages) – служебная, отвечающая за порядок глав в книге.
 + Папка [_services](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/_services) – служебная, отвечающая за стили.
 + Папка [img](https://github.com/slavashestakov2005/OlympiadProgramming/tree/main/img) – иллюстрации к книге.
