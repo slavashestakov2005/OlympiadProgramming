@@ -22,6 +22,14 @@
     \stepcounter{linetmp}
 }
 
+\def\py#1#2{
+    \setcounter{linetmp}{\thelinetmp + #2 - 1}
+    \inputminted[fontsize=\footnotesize, linenos=true, xleftmargin=\skippar, firstnumber=1,
+    firstline=\theline, lastline=\thelinetmp]{Python}{programs/#1.py}
+    \setcounter{line}{\theline + #2}
+    \stepcounter{linetmp}
+}
+
 \newmintinline[lcpp]{C++}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
 \newmintinline[lpy]{Python}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
 \newmintinline[lmd]{Markdown}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
