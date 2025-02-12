@@ -30,6 +30,11 @@
     \stepcounter{linetmp}
 }
 
+\def\progreset{
+    \setcounter{line}{1}
+    \setcounter{linetmp}{1}
+}
+
 \newmintinline[lcpp]{C++}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
 \newmintinline[lpy]{Python}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
 \newmintinline[lmd]{Markdown}{fontsize=\footnotesize, bgcolor=bg, breaklines, breakafter=\ }
